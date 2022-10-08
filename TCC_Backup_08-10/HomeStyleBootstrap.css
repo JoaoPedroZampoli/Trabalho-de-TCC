@@ -1,0 +1,46 @@
+.carousel .carousel-indicators button {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.carousel .carousel-indicators{
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background: rgba(0, 0, 0, 0.411);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    width: fit-content;
+    padding: 5px;
+}
+
+.carousel .carousel-control-next, .carousel .carousel-control-prev{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    padding: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.466);
+    width: 80px;
+    height: 80px;
+    margin: auto 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    text-align: center;
+    border: 0;
+    transition: opacity .15s ease;
+}
+
+
+
+
