@@ -1,0 +1,13 @@
+Exemplo Registro Auth:
+{
+    "nome": "teste",
+    "sobrenome": "de Sobrenome",
+    "email": "teste@gmail.com",
+    "cpf": "111.111.111-11",
+    "telefone": "(11) 91111-1111",
+    "genero": "Masculino",
+    "datanasc": "09/09/1962",
+    "senha": "Jpszampoli@2014"
+}
+
+#################################################################
