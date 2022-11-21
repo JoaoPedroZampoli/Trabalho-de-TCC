@@ -281,7 +281,7 @@ const Register = () => {
                     <NameInput type="text" placeholder="Digite aqui o seu Sobrenome"/>
                     <Input type="email" id="selector" placeholder="Digite aqui o seu E-mail"/>
                     <InputMask mask="999.999.999-99" placeholder="Digite aqui o seu CPF" style={{...InputMaskClass, border: isActive?'1.5px solid #823DB7': '1.5px solid lightgray', outline: isActive? '1.5px solid #823DB7':'1.5px solid transparent'}} onFocus={handleClick} onBlur={handleClick}/>
-                    <TextField id="Nome" label="Digite aqui o seu Nome" variant="outlined" style={InputTextField}/>
+                    {/*<TextField id="Nome" label="Digite aqui o seu Nome" variant="outlined" style={InputTextField}/>*/}
                     <InputMask mask={value.length < 15 ? "(99) 9999-99999" : "(99) 99999-9999"} maskChar="" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Digite aqui o seu Telefone" style={{...InputMaskClass, border: isActive2?'1.5px solid #823DB7': '1.5px solid lightgray', outline: isActive2? '1.5px solid #823DB7':'1.5px solid transparent'}} onFocus={handleClick2} onBlur={handleClick2}/>
                     {/*<InputLabel id="demo-simple-select-label">Age</InputLabel>
                     <Select
@@ -302,7 +302,7 @@ const Register = () => {
                         <Option>Outro</Option>
                         <Option>Prefiro Não Informar</Option>
                     </SelectAntigo>
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    {/*<LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DatePicker
                         label="Digite aqui a sua Data de Nascimento"
                         value={DataNascimento}
@@ -312,8 +312,8 @@ const Register = () => {
                         }}
                         renderInput={(params) => <TextField {...params} variant="outlined" style={InputTextField}/>}
                     />
-                    </LocalizationProvider>
-                    {/*<Input id="Birth" type="date" placeholder="Digite aqui a sua Data de Nascimento"/>*/}
+                    </LocalizationProvider>*/}
+                    <Input id="Birth" placeholder="Digite aqui a sua Data de Nascimento"/>
                     <Input type="password" placeholder="Digite aqui a sua Senha"/>
                     <Input type="password" placeholder="Confirme aqui a sua Senha"/>
                     <Agreement>Ao criar a conta, declaro que aceito os <Link>Termos de Uso</Link> e a <Link>Política de Privacidade</Link>, incluindo como meus dados são processados</Agreement>
