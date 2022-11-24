@@ -1,0 +1,81 @@
+div.box{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483645;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #000000b2;
+}
+
+div.box-internal{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto  ;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+div.box-header{
+    padding-bottom: 0px;
+    font-family: "Open-Sans", sans-serif;
+    font-size: 22px;
+    color: white;
+
+}
+
+div.box-text{
+    color: rgb(194, 194, 194);
+    font-family: "Open-Sans", sans-serif;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+}
+
+button.accept{
+    padding: 6px;
+    width: 100px;
+    border: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 0.5px;
+    background-color: #006699d5;
+    color: rgb(255, 255, 255);
+    transition-duration: 0.4s;
+    border-color: rgb(56, 56, 56);
+    border-style: solid;
+    border-width: 1px;
+}
+
+button.decline{
+    padding: 6px;
+    width: 350px;
+    border: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 0.5px;
+    background-color: #00476ad5;
+    color: rgb(255, 255, 255);
+    transition-duration: 0.4s;
+    border-color: rgb(56, 56, 56);
+    border-style: solid;
+    border-width: 1px;
+}
+
+button.accept:active{
+    background-color: #004669bf;
+}
+
+button.accept:hover{
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1px;
+}
+
+button.decline:active{
+    background-color: #00324bbf;
+}
+
+button.decline:hover{
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1px;
+}

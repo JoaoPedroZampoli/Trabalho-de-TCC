@@ -1,0 +1,134 @@
+html{
+    scroll-behavior: smooth;
+}
+
+a.nav-link{
+    color: #000000;
+}
+
+div.navbar{
+    display: flex;
+    position: relative;
+    background-color: #5E3A80;
+    z-index: 99;
+}
+
+a.nav-link.borderbutton{
+    color: #1d1d1d;
+}
+
+.borderbutton{
+    position: relative;
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+}
+
+.borderbutton:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #b556f2;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.borderbutton:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+button.buttonsearch{
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+}
+
+button.buttonsearch:hover {
+    background: rgb(94, 94, 94);
+    transition: 0.5s;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+button.buttonuser{
+    color: #000000;
+    background: none;
+    border: none;
+    transition: all 0.5s;
+}
+
+button.buttonuser:hover{
+    color: #ffffff;
+    background: none;
+    border: none;
+}
+
+button.buttoncart{
+    color: #000000;
+    background: none;
+    border: none;
+    transition: all 0.5s;
+}
+
+button.buttoncart:hover{
+    color: #ffffff;
+    background: none;
+    border: none;
+}
+
+.fa-heart{
+    color: #000000;
+
+}
+.fa-heart:hover{
+    display: none;
+}
+
+h2{
+    padding-top: 1vw;
+    text-align: center;
+    font-family: "Open-Sans",sans-serif;
+    background: none;
+}
+
+div.backgroundcards{
+    background-image: url("Images/Imagem4.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: flex;
+}
+
+.cardcategorias{
+    background: rgba(255, 215, 67, 0.69);
+    border-radius: 10px;
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border: 1px solid rgba(255, 215, 67, 0.07);
+    position: flex;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-left: 4.5vw;
+    margin-right: 4.5vw;
+    margin:1vw;
+    width: 14vw;
+    height: 14vw;
+}
+
+.cardcategorias:hover{
+    box-shadow: 0 10px 20px 4px rgba(255, 214, 67, 0.464);
+    transform: scale(1.02);
+}
+
+.space{
+    margin: 1vw;
+}
