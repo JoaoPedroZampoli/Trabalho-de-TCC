@@ -5,7 +5,8 @@ html{
 }
 
 body{
-    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(Images/Imagem_CadastroForm.jpg);
+    background: linear-gradient(223deg, #e98dff 0%, #ff9a8f 46%, #ffb53c 100%);
+    min-height: 100vh;
     background-size: cover;
 }
 

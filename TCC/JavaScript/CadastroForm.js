@@ -29,68 +29,11 @@ $(document).ready(function(){
        ####################################################
        */
 
-       const form = document.querySelector("form"),
-        nextBtn = form.querySelector(".nextBtn"),
-        backBtn = form.querySelector(".backBtn"),
-        allInput = form.querySelectorAll(".first .input_form");
         senha = form.querySelector("#Senha");
         confirmarsenha = form.querySelector("#ConfirmarSenha");
 
 
-        nextBtn.addEventListener("click", ()=> {
-        allInput.forEach(input => {
-        if(input.value != "" && senha.value == confirmarsenha.value){
-            form.classList.add('secActive');
-        }else{
-            if(senha.value != confirmarsenha.value){
-                form.classList.remove('secActive');
-            toastr.options = {
-                "closeButton": true,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": true,
-                "positionClass": "toast-top-right",
-                "preventDuplicates": true,
-                "onclick": null,
-                "showDuration": "300",
-                "hideDuration": "1000",
-                "timeOut": "5000",
-                "extendedTimeOut": "1000",
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-                }
-            
-            Command: toastr["warning"]("As senhas não estão iguais", "Ocorreu um erro ao continuar o cadastro")
-            }else{
-            form.classList.remove('secActive');
-            toastr.options = {
-                "closeButton": true,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": true,
-                "positionClass": "toast-top-right",
-                "preventDuplicates": true,
-                "onclick": null,
-                "showDuration": "300",
-                "hideDuration": "1000",
-                "timeOut": "5000",
-                "extendedTimeOut": "1000",
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-                }
-            
-            Command: toastr["warning"]("Verifique se todos os campos estão preenchidos de forma correta", "Ocorreu um erro ao continuar o cadastro")
-
-        }
-    }
-    })
-})
-
-backBtn.addEventListener("click", () => form.classList.remove('secActive'));
+//backBtn.addEventListener("click", () => form.classList.remove('secActive'));
 
 
 
@@ -149,7 +92,7 @@ function SenhaChange(){
     }
 }
 
-window.onload=function(){
+/*window.onload=function(){
     
     const preencherCampos = (endereco) =>{
         document.getElementById("Logradouro").value = endereco.logradouro;
@@ -201,7 +144,7 @@ window.onload=function(){
     /*Via CEP Acima*/
     /*API IBGE Estados Abaixo*/
 
-    const SelectEstados = document.getElementById("Estados");
+    /*const SelectEstados = document.getElementById("Estados");
 
     fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados").then(res => res.json()).then(res => {
         return res.sort((a,b) => a.sigla > b.sigla ? 1 : -1)
@@ -214,7 +157,7 @@ window.onload=function(){
     /*API IBGE Estados Acima*/
     /*API IBGE Cidades Abaixo*/
 
-    $("#Estados").change(function(){
+    /*$("#Estados").change(function(){
         if($(this).val()){
             $.getJSON('https://servicodados.ibge.gov.br/api/v1/localidades/estados/'+$("select#Estados.input_form").val()+'/municipios', {id: $("select#Estados.input_form").val()}, function (json){
                 var options = '<option disabled selected value="" hidden></option>';

@@ -17,7 +17,7 @@ body{
 }
 
 .Background{
-    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url(Images/Images_LoginForm.jpg);
+    background: linear-gradient(223deg, #e98dff 0%, #ff9a8f 46%, #ffb53c 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: bottom;
@@ -33,7 +33,7 @@ section{
   height: 100vh;
 }
 
-button.Button_Cadastro{
+button.Button_Login{
     font-family: "Inter", "Montserrat", sans-serif;
     border: 1px rgba(0,0,0,0) solid;
     background-color: #833EC5;
@@ -44,7 +44,7 @@ button.Button_Cadastro{
     transition: 0.7s;
 }
 
-button.Button_Cadastro:hover{
+button.Button_Login:hover{
     font-family: "Inter", "Montserrat", sans-serif;
     border: 1px rgba(0,0,0,0) solid;
     background-color: #6a329f !important;
@@ -55,7 +55,7 @@ button.Button_Cadastro:hover{
     transition: 0.7s;
 }
 
-button.Button_Cadastro:hover i{
+button.Button_Login:hover i{
     transform: translateX(5px);
     transition: 0.8s;
 }
@@ -65,7 +65,7 @@ button > i{
     transition: transform .3s ease-in-out;
 }
 
-button.Button_Cadastro:active {
+button.Button_Login:active {
     transform: scale(0.97);
 }
 
@@ -82,6 +82,15 @@ button.Button_Cadastro:active {
 .input_group_design{
     position: relative;
     margin: 15px 1px;
+}
+
+.Login_Background{
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.2px);
+  -webkit-backdrop-filter: blur(10.2px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .input_form{

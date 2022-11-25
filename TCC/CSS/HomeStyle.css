@@ -123,6 +123,10 @@ ol, ul {
     transform-origin: bottom left;
 }
 
+a:hover{
+    color: black !important;
+}
+
 .a_navbar:hover{
     color:black !important;
 }
@@ -133,7 +137,7 @@ ol, ul {
     text-decoration: none;
 }
 
-button.Right_Buttons{
+a.Right_Buttons{
     border: none;
     background: none;
     padding: 10px 12px;
@@ -145,8 +149,9 @@ button.Right_Buttons{
     width: 44px;
 }
 
-button.Right_Buttons:hover{
+a.Right_Buttons:hover{
     background: rgb(254, 166, 254);
+    color: black;
 }
 
 .Search_Bar{
