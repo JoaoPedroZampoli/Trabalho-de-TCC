@@ -17,6 +17,18 @@
 
         $result = $conexao->query($SqlUpdate);
 
+        unset($_SESSION['row']);
+        $sql = "SELECT * FROM tb_usuarios WHERE IdUsuario='$IdUsuario'";
+        //$result = $conexao->query($sql);
+        $result = mysqli_query($conexao, $sql);
+
+        $row = mysqli_fetch_array($result);
+        
+        session_start();
+
+        $_SESSION['row'] = $row;
+
+
     }
     //session_abort();
     //include_once("Sistema.php");

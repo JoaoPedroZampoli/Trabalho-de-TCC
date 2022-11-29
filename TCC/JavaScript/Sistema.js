@@ -12,6 +12,7 @@ function Appear(){
     $('button#InputEnviar').show();
     $('button#InputEditar').hide();
     $('input.input_form').attr('disabled', false);
+    //$('input#Email').attr('disabled', true);
     $('select#Genero').attr('disabled', false);
 }
 

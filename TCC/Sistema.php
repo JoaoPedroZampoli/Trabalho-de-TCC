@@ -1,4 +1,6 @@
 <?php
+
+    include_once("config.php");
     session_start();
     //print_r($_SESSION);
     if((!isset($_SESSION['Email']) == true) and (!isset($_SESSION['Password']) == true )){
@@ -6,9 +8,9 @@
         unset($_SESSION['Password']);
         header('Location: Login.php');
     }
+    
     $row = $_SESSION['row'];
     $IdUsuario = $row[0];
-
     //print_r($row);
 ?>
 <!DOCTYPE html>
@@ -51,6 +53,9 @@
     </head>
 <body>
     <script>
+        $(document).ready(function(){
+            $("select#Genero").val('<?php echo $row[5]; ?>');
+        })
         function Sucesso(){
             Swal.fire({
                 title: "Sucesso!",
@@ -59,6 +64,38 @@
                 confirmButtonText: "Continuar"
             })
         }
+        function Aviso(){
+            Swal.fire({
+                title: 'Você deseja deletar a sua conta?',
+                text: "Você não poderá reverter isso!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#833EC5',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim, Delete a conta'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                Swal.fire(
+                    'Deletado!',
+                    'Sua Conta foi Deletada',
+                    'success'
+                ).then(function(){
+                    $.ajax({
+                    url:'DeletarUsuario.php',
+                    complete: function () {
+                        location.reload();
+                        console.log("Foi Excluído");
+                    },
+                    error: function () {
+                        console.log('Erro');
+                    }
+                    });
+                    
+                })
+                }
+            })
+        }
+        
     </script>
     <div class="Home">
         <header class="NavHeader" id="NavHeader">
@@ -112,12 +149,12 @@
                         </div>
                         <div class="Input_Form_Group">
                             <label class="Input_Form_Label">Gênero:</label>
-                            <select required="" id="Genero" name="Genero" class="input_form" value="<?php echo $row[5]; ?>">
+                            <select required="" id="Genero" name="Genero" class="input_form" >
                                 <option disabled value hidden></option>
-                                <option>Masculino</option>
-                                <option>Feminino</option>
-                                <option>Outro</option>
-                                <option>Não desejo Informar</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Outro">Outro</option>
+                                <option value="Não desejo Informar">Não desejo Informar</option>
                             </select>
                         </div>
                         <div class="Input_Form_Group">
@@ -136,7 +173,7 @@
                         <button type="button" class="Button_Editar" id="InputEditar" name="InputEditar" value="Editar" onclick="Appear()">Editar <i class="fa-solid fa-pen"></i></button>
                         <button type="button" class="Button_Cancelar" id="InputCancelar" name="InputCancelar" value="Cancelar" onclick="Disappear()">Cancelar <i class="fa-solid fa-xmark"></i></button>
                         <button type="submit" class="Button_Confirmar" id="InputEnviar" name="InputEnviar" value="Salvar">Salvar <i class="fa-solid fa-arrow-right"></i></button>
-                        <button type="submit" class="Button_Excluir" id="InputExcluir" name="InputExcluir" value="Excluir Conta" onclick="Redirect()">Excluir Conta <i class="fa-solid fa-eraser"></i></button>
+                        <button type="button" class="Button_Excluir" id="InputExcluir" name="InputExcluir" value="Excluir Conta" onclick="Aviso()">Excluir Conta <i class="fa-solid fa-eraser"></i></button>
                     </div>
                 </form>
             </div>

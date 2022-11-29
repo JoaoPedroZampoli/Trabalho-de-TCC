@@ -33,7 +33,7 @@
                 header('Location: Sistema.php');
             }
             else{
-                header('Location: AdminPage.html');
+                header('Location: AdminPage.php');
             }
         }
     }
