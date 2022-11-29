@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 25-Nov-2022 às 03:53
+-- Tempo de geração: 29-Nov-2022 às 03:55
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -47,6 +47,37 @@ CREATE TABLE IF NOT EXISTS `tb_endereco` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `tb_produtos`
+--
+
+DROP TABLE IF EXISTS `tb_produtos`;
+CREATE TABLE IF NOT EXISTS `tb_produtos` (
+  `IdProduto` int(11) NOT NULL AUTO_INCREMENT,
+  `NomeProduto` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `DescricaoProduto` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `PrecoProduto` double NOT NULL,
+  `ImagemProduto` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TextoAlternativoProduto` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `PromoInfoProduto` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `PromoBackgroundProduto` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `DataCriacaoProduto` datetime NOT NULL,
+  `DataUltimaAlteracaoProduto` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`IdProduto`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `tb_produtos`
+--
+
+INSERT INTO `tb_produtos` (`IdProduto`, `NomeProduto`, `DescricaoProduto`, `PrecoProduto`, `ImagemProduto`, `TextoAlternativoProduto`, `PromoInfoProduto`, `PromoBackgroundProduto`, `DataCriacaoProduto`, `DataUltimaAlteracaoProduto`) VALUES
+(1, 'Produto de Teste', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a pretium ante. Nullam non volutpat libero. Cras nunc ipsum, tempor non elementum a, interdum eget dui. Maecenas vitae eros ut purus mattis ultricies. Donec eu lectus et lorem varius bibendum. Nam vitae risus euismod, tincidunt tellus vitae, finibus arcu. Maecenas eu sapien ac quam sagittis pretium. Suspendisse ac eros vitae leo consectetur dapibus.</p>', 169.99, 'Pijama1.png', 'Imagem de um Pijama', '', '', '2022-11-28 17:15:16', NULL),
+(2, 'Produto 2', '<p>Phasellus non ornare eros. Praesent ut nibh vestibulum, porttitor neque ut, faucibus eros. Proin in tempor libero. Suspendisse lobortis dolor ut risus pharetra pulvinar. Proin suscipit sapien sapien, ac tincidunt nisi imperdiet a. Nulla vitae porttitor nibh. Donec dui sem, luctus sit amet scelerisque a, blandit eget neque. Quisque eget nulla vitae augue ultrices tristique. Ut gravida nisl et nunc fringilla gravida. Donec ultrices placerat congue. Aenean rhoncus rutrum aliquet. Ut tincidunt viverra tortor imperdiet maximus. In massa risus, varius tempor rhoncus vitae, aliquet eget purus. Duis mollis, lacus nec varius aliquet, metus sapien commodo tortor, et cursus mi odio eget magna.</p>', 149.99, 'Pijama2.png', 'Imagem de um Pijama', '', '', '2022-11-28 17:15:16', NULL),
+(3, 'Pijama 3', '<p>Ut tellus enim, dignissim non risus vel, sagittis vehicula nisl. Nunc auctor nibh a ligula sagittis efficitur. Praesent finibus eros quis ultrices consequat. Nulla ex erat, lobortis vel mauris sed, maximus auctor quam. Pellentesque faucibus, elit vel eleifend semper, eros enim iaculis ex, nec elementum enim nisi convallis justo. Integer at sapien non mauris tincidunt ultricies in vitae nibh. Sed eu ultricies magna. Proin varius purus at tortor auctor, a tristique orci euismod. Etiam cursus nisi vitae ex semper ultricies.</p>', 109.99, 'Pijama3.png', 'Imagem de um Pijama', '', '', '2022-11-28 17:25:14', '2022-11-28 14:39:52'),
+(4, 'Pijama 4', '<p>Ut tellus enim, dignissim non risus vel, sagittis vehicula nisl. Nunc auctor nibh a ligula sagittis efficitur. Praesent finibus eros quis ultrices consequat. Nulla ex erat, lobortis vel mauris sed, maximus auctor quam. Pellentesque faucibus, elit vel eleifend semper, eros enim iaculis ex, nec elementum enim nisi convallis justo. Integer at sapien non mauris tincidunt ultricies in vitae nibh. Sed eu ultricies magna. Proin varius purus at tortor auctor, a tristique orci euismod. Etiam cursus nisi vitae ex semper ultricies.</p>', 119.99, 'Pijama4.png', 'Imagem de um Pijama', '', '', '2022-11-28 17:25:14', '2022-11-28 14:39:52');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `tb_usuarios`
 --
 
@@ -72,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `tb_usuarios` (
 
 INSERT INTO `tb_usuarios` (`IdUsuario`, `NomeUsuario`, `EmailUsuario`, `CPFUsuario`, `TelefoneUsuario`, `GeneroUsuario`, `DataNascUsuario`, `SenhaUsuario`, `StatusUsuario`, `DataCriacaoUsuario`, `DataUltimaAlteracaoUsuario`) VALUES
 (1, 'Joao Pedro da Silva Zampoli', 'jpszampoli53@gmail.com', '222.222.222-22', '(11) 99148-4014', 'Masculino', '2005-03-08', 'teste1', 0, '2022-11-24 20:43:07', '2022-11-25 00:53:13'),
-(2, 'Teste', 'teste@teste.com', '111.111.111-11', '(11) 91111-1111', 'Masculino', '2000-11-11', 'teste', 0, '2022-11-25 00:18:44', '2022-11-25 00:18:44'),
+(2, 'Teste2', 'teste@teste.com', '111.111.111-11', '(11) 91111-1111', 'Masculino', '2000-11-11', 'teste', 0, '2022-11-25 00:18:44', '2022-11-29 00:52:42'),
 (3, 'Admin', 'Admin@pynpin.com', '111.111.111-11', '(11) 91111-1111', 'Masculino', '2005-03-08', 'admin', 1, '2022-11-25 00:19:58', '2022-11-25 00:20:17');
 
 --

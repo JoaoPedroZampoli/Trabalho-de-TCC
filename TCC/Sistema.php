@@ -6,7 +6,10 @@
         unset($_SESSION['Password']);
         header('Location: Login.php');
     }
-    $Logado = $_SESSION['Email'];
+    $row = $_SESSION['row'];
+    $IdUsuario = $row[0];
+
+    //print_r($row);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -40,10 +43,23 @@
         <link href="Libraries/CodeSeven-toastr-50092cc/build/toastr.css" rel="stylesheet">
         <script src="Libraries/CodeSeven-toastr-50092cc/toastr.js"></script>
         <!--Toastr Final-->
+        <!--Sweet Alert Começo-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.14/dist/sweetalert2.all.min.js"></script>
+        <!--Sweet Alert Final-->
         <!--JavaScript Começo-->
-        <!--<script src="JavaScript/CadastroForm.js"></script>-->
+        <script src="JavaScript/Sistema.js"></script>
     </head>
 <body>
+    <script>
+        function Sucesso(){
+            Swal.fire({
+                title: "Sucesso!",
+                text: "Seu Cadastro foi atualizado",
+                icon: "success",
+                confirmButtonText: "Continuar"
+            })
+        }
+    </script>
     <div class="Home">
         <header class="NavHeader" id="NavHeader">
         <nav id="navbar" class="MenuNav">
@@ -56,7 +72,7 @@
         </a>
         <form>
             <input class="Search_Bar" type="search" placeholder="Pesquise Aqui ->">
-            <button class="Search_Button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="Search_Button"><i class="fa-solid fa-magnifying-glass" style="margin: auto;"></i></button>
         </form class="Search_Form">
         <ul class="nav_buttons">
             <a class="Right_Buttons"><i class="fa-regular fa-heart"></i></a>
@@ -65,7 +81,66 @@
         </ul>
         </nav>
     </header>
-        <h1>Minha Conta</h1>
+        <h1 class="TextHeader">Minha Conta</h1>
+        <div class="ProfileContainer">
+            <div class="ProfileMenu col-sm-4 col-md-3 col-lg-2">
+                <img class="ProfileImage" src="Images/ProfileImage.png">
+                <span class="ProfileName"><?php echo $row[1]; ?></span>
+                <span class="ProfileEmail"><?php echo $row[2]; ?></span>
+            </div>
+            <div class="ProfileInformations col-sm-8 col-md-9 col-lg-10">
+                <h2 class="ProfileInfoTitle">Informações Pessoais</h2>
+                <form action="EditarUsuario.php" method="POST" class="FormUsuario">
+                    <div class="Input_Form_Row">
+                        <div class="Input_Form_Group">
+                            <label class="Input_Form_Label">Nome Completo:</label>
+                            <input required="" type="text" name="NomeCompleto" id="NomeCompleto" class="input_form" value="<?php echo $row[1]; ?>">
+                        </div>
+                        <div class="Input_Form_Group">
+                            <label class="Input_Form_Label">Email:</label>
+                            <input required="" type="email" name="Email" id="Email" class="input_form" value="<?php echo $row[2]; ?>">
+                        </div>
+                        <div class="Input_Form_Group">
+                            <label class="Input_Form_Label">CPF:</label>
+                            <input required="" type="text" name="CPF" id="CPF" class="input_form" value="<?php echo $row[3]; ?>">
+                        </div>
+                    </div>
+                    <div class="Input_Form_Row">
+                        <div class="Input_Form_Group">
+                            <label class="Input_Form_Label">Telefone:</label>
+                            <input required="" type="text" name="Telefone" id="Telefone" class="input_form" value="<?php echo $row[4]; ?>">
+                        </div>
+                        <div class="Input_Form_Group">
+                            <label class="Input_Form_Label">Gênero:</label>
+                            <select required="" id="Genero" name="Genero" class="input_form" value="<?php echo $row[5]; ?>">
+                                <option disabled value hidden></option>
+                                <option>Masculino</option>
+                                <option>Feminino</option>
+                                <option>Outro</option>
+                                <option>Não desejo Informar</option>
+                            </select>
+                        </div>
+                        <div class="Input_Form_Group">
+                            <label class="Input_Form_Label">Data de Nascimento:</label>
+                            <input required="" type="date" name="DataNasc" class="input_form" value="<?php echo $row[6]; ?>">
+                        </div>
+                    </div>
+                    <div class="Input_Form_Row">
+                        <div class="Input_Form_Group">
+                            <label class="Input_Form_Label">Senha:</label>
+                            <input required="" type="password" name="Senha" class="input_form" value="<?php echo $row[7]; ?>">
+                        </div>
+                    </div>
+                    <input type="hidden" name="IdUsuario" value="<?php echo $row[0]; ?>">
+                    <div class="ActionButtons">
+                        <button type="button" class="Button_Editar" id="InputEditar" name="InputEditar" value="Editar" onclick="Appear()">Editar <i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="Button_Cancelar" id="InputCancelar" name="InputCancelar" value="Cancelar" onclick="Disappear()">Cancelar <i class="fa-solid fa-xmark"></i></button>
+                        <button type="submit" class="Button_Confirmar" id="InputEnviar" name="InputEnviar" value="Salvar">Salvar <i class="fa-solid fa-arrow-right"></i></button>
+                        <button type="submit" class="Button_Excluir" id="InputExcluir" name="InputExcluir" value="Excluir Conta" onclick="Redirect()">Excluir Conta <i class="fa-solid fa-eraser"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>

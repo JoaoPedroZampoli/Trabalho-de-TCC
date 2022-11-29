@@ -17,7 +17,7 @@
 
         $row = mysqli_fetch_array($result);
 
-        print_r($row);
+        $_SESSION['row'] = $row;
 
         if(mysqli_num_rows($result) < 1){
             unset($_SESSION['Email']);

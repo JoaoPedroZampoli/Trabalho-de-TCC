@@ -11,8 +11,23 @@
         $DataNasc = $_POST['Data-Nascimento'];
         $Senha = $_POST['Senha'];
         $IsAdmin = 0;
+        $NewsletterUsuario = 0;
 
-        $result = mysqli_query($conexao, "INSERT INTO tb_usuarios(NomeUsuario, EmailUsuario, CPFUsuario, TelefoneUsuario, GeneroUsuario, DataNascUsuario, SenhaUsuario, StatusUsuario) VALUES ('$Nome', '$Email', '$CPF', '$Telefone', '$Genero', '$DataNasc', '$Senha', '$IsAdmin')");
+        $result = mysqli_query($conexao, "INSERT INTO tb_usuarios(NomeUsuario, EmailUsuario, CPFUsuario, TelefoneUsuario, GeneroUsuario, DataNascUsuario, SenhaUsuario, StatusUsuario, NewsletterUsuario) VALUES ('$Nome', '$Email', '$CPF', '$Telefone', '$Genero', '$DataNasc', '$Senha', '$IsAdmin', '$NewsletterUsuario')");
+        $AffectedRows = mysqli_affected_rows($conexao);
+        printf("Affected rows (INSERT): %d\n", mysqli_affected_rows($conexao));
+        if($AffectedRows = 1){
+                $_SESSION['Email'] = $Email;
+                $_SESSION['Password'] = $Senha;
+                header("Location: Sistema.php");
+        }
+        else{
+            ?>
+            <script type="text/javascript">
+                alert("Erro");
+            </script>
+           <?php
+        }
     }
 ?>
 
@@ -48,10 +63,31 @@
         <link href="Libraries/CodeSeven-toastr-50092cc/build/toastr.css" rel="stylesheet">
         <script src="Libraries/CodeSeven-toastr-50092cc/toastr.js"></script>
         <!--Toastr Final-->
+        <!--Sweet Alert Começo-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.14/dist/sweetalert2.all.min.js"></script>
+        <!--Sweet Alert Final-->
         <!--JavaScript Começo-->
         <script src="JavaScript/CadastroForm.js"></script>
 	</head>
 <body>
+    <script>
+        function erro(){
+        Swal.fire({
+            title: "Erro!",
+            text: "Ocorreu algum erro ao realizar o seu cadastro",
+            icon: "error",
+            confirmButtonText: "Fechar"
+        })
+        }
+        function sucesso(){
+            Swal.fire({
+                title: "Sucesso!",
+                text: "Seu Cadastro foi realizado",
+                icon: "success",
+                confirmButtonText: "Continuar"
+            })
+        }
+    </script>
     <header>
         <div class="MenuNav">
             <a href="HomePage.html"><img src="Images/PynPin - Logo Branco.png" width="130" style="position: relative; margin:4px 2%"></a>
@@ -120,7 +156,7 @@
                         </div>
                         <div class="input_group_design">
                         <div class="checkbox-container">
-                            <input type="checkbox" checked id="Aceite" name="Aceite" style="display: none;">
+                            <input type="checkbox" required="checked" id="Aceite" name="Aceite" style="display: none;">
                             <label for="Aceite" class="check">
                                 <svg width="18px" height="18px" viewBox="0 0 18 18">
                                     <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>

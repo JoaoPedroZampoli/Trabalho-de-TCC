@@ -32,7 +32,6 @@ $(document).ready(function(){
         senha = form.querySelector("#Senha");
         confirmarsenha = form.querySelector("#ConfirmarSenha");
 
-
 //backBtn.addEventListener("click", () => form.classList.remove('secActive'));
 
 
@@ -90,6 +89,43 @@ function SenhaChange(){
         $("#SenhaBar").css({"width":"0%" , "background-color":"#dc3545"});
         $("#PasswordQuality").text("Fraca");
     }
+}
+
+/*const Form_Cadastro = document.getElementById("Form_Cadastro");
+
+if(Form_Cadastro){
+    Form_Cadastro.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        
+        const dadosForm = new FormData(Form_Cadastro);
+
+        await fetch("cadastrarUsuario.php", {
+            method:"POST";
+            body: dadosForm
+        })
+    })
+}*/
+
+function erro(){
+    Swal.fire({
+        title: "Erro!",
+        text: "Ocorreu algum erro ao realizar o seu cadastro",
+        icon: "error",
+        confirmButtonText: "Fechar"
+    })
+    alert("Teste");
+}
+function sucesso(){
+    Swal.fire({
+        title: "Sucesso!",
+        text: "Seu Cadastro foi realizado",
+        icon: "success",
+        confirmButtonText: "Continuar ->"
+    })
+}
+
+window.onload=function(){
+    
 }
 
 /*window.onload=function(){
