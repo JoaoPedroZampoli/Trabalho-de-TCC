@@ -1,0 +1,841 @@
+<!Doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pynpin Modas</title>
+        <meta name="description" content="">
+        <link rel="icon" href="Images/Logo-Icon.png">
+        <link rel="stylesheet" href="CSS/HomeStyle.css" type="text/css">
+        <link rel="stylesheet" href="CSS/HomeStyleBootstrap.css" type="text/css">
+        <!--JQuery Começo-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!--JQuery Final-->
+        <!--Font Awesome Começo-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--Font Awesome Final-->
+        <!--Bootstrap Começo-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <!--Bootstrap Final-->
+        <!--Owl Carousel Começo-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!--Owl Carousel Final-->
+        <!--Reflow HQ Começo-->
+        <link href="https://cdn.reflowhq.com/v2/toolkit.min.css" rel="stylesheet">
+        <script src="https://cdn.reflowhq.com/v2/toolkit.min.js" data-reflow-store="999999" defer></script>
+        <!--Reflow HQ Final-->
+        <!--JavaScript Começo-->
+        <script src="JavaScript/HomePage.js"></script>
+        <!--JavaScript Final-->
+    </head>
+<body>
+  <div class="Home">
+    <header class="NavHeader" id="NavHeader">
+    <nav id="navbar" class="MenuNav">
+      <a href="HomePage.html">
+        <picture>
+          <source srcset="Images/PynPin_Simples_Roxo.png" media="(max-width: 1023px)">
+          <source srcset="Images/PynPin - Logo.png" media="(min-width:1024px)">
+          <img src="Images/PynPin - Logo.png" alt="PynPin" style="height: 55px;">
+        </picture>
+      </a>
+      <form>
+        <input class="Search_Bar" type="search" placeholder="Pesquise Aqui ->">
+        <button class="Search_Button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form class="Search_Form">
+      <ul class="nav_buttons">
+        <a class="Right_Buttons"><i class="fa-regular fa-heart"></i></a>
+        <a class="Right_Buttons" href="Carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a class="Right_Buttons" href="Login.php"><i class="fa-regular fa-user"></i></a>
+      </ul>
+    </nav>
+    <!--Segundo Nav-->
+    <div id="Secondnavbar" class="SecondMenuNav">
+      <ul class="nav_options">
+        <li class="nav_li"><a class="a_navbar" href="#">Departamentos&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></a></li>
+        <li class="nav_li"><a class="a_navbar" href="#">Novidades&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></a></li>
+        <li class="nav_li"><a class="a_navbar" href="#">Ofertas&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></a></li>
+        <li class="nav_li"><a class="a_navbar"href="#">Teste 4</a></li>
+        <li class="nav_li"><a class="a_navbar" href="#">Teste 5</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!--Carousel Start-->
+  <div id="Main_Carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-ride="carousel" data-interval="3000">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#Main_Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#Main_Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#Main_Carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#Main_Carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner .embed-responsive embed-responsive-16by9">
+      <div class="carousel-item embed-responsive-item active">
+        <img src="Images/Imagem1.png" class="d-block w-100" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect></img>
+      </div>
+      <div class="carousel-item embed-responsive-item">
+        <img src="Images/Imagem2.png" class="d-block w-100" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect></img>
+  
+      </div>
+      <div class="carousel-item embed-responsive-item">
+        <img src="Images/Imagem3.png" class="d-block w-100" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect></img>
+  
+      </div>
+      <div class="carousel-item embed-responsive-item">
+        <img src="Images/Imagem4.png" class="d-block w-100" aria-label="Placeholder: Fourth slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect></img>
+  
+      </div>
+      <!-- Exemplo de Carousel 
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="1900" height="750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+  
+      </div>
+      -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#Main_Carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#Main_Carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--Carousel End-->
+  <div class="Colecoes_Div">
+    <div class="Colecoes_Text_Div">
+      <div class="Space_Colecoes_Div"></div>
+      <h2 class="Colecoes_H2">Coleções</h2>
+      <div class="Space_Colecoes_Div">
+      <a href="#" class="Ver_Mais_Button">Ver Mais -></a>
+    </div>
+  </div>
+  <div class="owl-carousel owl-theme Colecoes_Carousel" style="margin: 10px 0px 10px 0;">
+    <!--Começo Item-->
+    <div class="carousel_card">
+      <div class="carousel_card_img" style="background: #60b2db;"></div>
+        <div class="carousel_card_info">
+          <div class="carousel_card_text">
+            <p class="carousel_text_title">Título Teste</p>
+            <p class="carousel_text_subtitle">Subtítulo</p>
+          </div>
+          <div class="carousel_card_icon">
+            <svg viewBox="0 0 28 25" class="Arrow">
+              <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    <!--Final Item-->
+    <!--Começo Item-->
+    <div class="carousel_card">
+      <div class="carousel_card_img" style="background: #f3bc46;"></div>
+        <div class="carousel_card_info">
+          <div class="carousel_card_text">
+            <p class="carousel_text_title">Título Teste</p>
+            <p class="carousel_text_subtitle">Subtítulo</p>
+          </div>
+          <div class="carousel_card_icon">
+            <svg viewBox="0 0 28 25" class="Arrow">
+              <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    <!--Final Item-->
+    <!--Começo Item-->
+    <div class="carousel_card">
+      <div class="carousel_card_img" style="background: #f13b3b;"></div>
+        <div class="carousel_card_info">
+          <div class="carousel_card_text">
+            <p class="carousel_text_title">Título Teste</p>
+            <p class="carousel_text_subtitle">Subtítulo</p>
+          </div>
+          <div class="carousel_card_icon">
+            <svg viewBox="0 0 28 25" class="Arrow">
+              <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    <!--Final Item-->
+    <!--Começo Item-->
+    <div class="carousel_card">
+      <div class="carousel_card_img" style="background: #7d4dec;"></div>
+        <div class="carousel_card_info">
+          <div class="carousel_card_text">
+            <p class="carousel_text_title">Título Teste</p>
+            <p class="carousel_text_subtitle">Subtítulo</p>
+          </div>
+          <div class="carousel_card_icon">
+            <svg viewBox="0 0 28 25" class="Arrow">
+              <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    <!--Final Item-->
+    <!--Começo Item-->
+    <div class="carousel_card">
+      <div class="carousel_card_img" style="background: #8ddb60;"></div>
+        <div class="carousel_card_info">
+          <div class="carousel_card_text">
+            <p class="carousel_text_title">Título Teste</p>
+            <p class="carousel_text_subtitle">Subtítulo</p>
+          </div>
+          <div class="carousel_card_icon">
+            <svg viewBox="0 0 28 25" class="Arrow">
+              <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    <!--Final Item-->
+    <!--Começo Item-->
+    <div class="carousel_card">
+      <div class="carousel_card_img" style="background: #db60cb;"></div>
+        <div class="carousel_card_info">
+          <div class="carousel_card_text">
+            <p class="carousel_text_title">Título Teste</p>
+            <p class="carousel_text_subtitle">Subtítulo</p>
+          </div>
+          <div class="carousel_card_icon">
+            <svg viewBox="0 0 28 25" class="Arrow">
+              <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    <!--Final Item-->
+    <!--Começo Item-->
+    <div class="carousel_card">
+      <div class="carousel_card_img" style="background: #c4c4c4;"></div>
+        <div class="carousel_card_info">
+          <div class="carousel_card_text">
+            <p class="carousel_text_title">Título Teste</p>
+            <p class="carousel_text_subtitle">Subtítulo</p>
+          </div>
+          <div class="carousel_card_icon">
+            <svg viewBox="0 0 28 25" class="Arrow">
+              <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    <!--Final Item-->
+    <!--Começo Item-->
+    <div class="carousel_card">
+      <div class="carousel_card_img" style="background: #98d9ff;"></div>
+        <div class="carousel_card_info">
+          <div class="carousel_card_text">
+            <p class="carousel_text_title">Título Teste</p>
+            <p class="carousel_text_subtitle">Subtítulo</p>
+          </div>
+          <div class="carousel_card_icon">
+            <svg viewBox="0 0 28 25" class="Arrow">
+              <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    <!--Final Item-->
+</div>
+  </div>
+
+  <!--<div class="card text-bg-dark">
+	  <img src="Images/Imagem_Fundo_Destaque.jpg" class="card-img" alt="...">
+	  <div class="card-img-overlay">
+		<h5 class="card-title">Card title</h5>
+		<p class="card-text">Teste de Texto para Card de Destaque</p>
+		<p class="card-text">Teste</p>
+	  </div>
+  </div>-->
+
+  <div class="Destaque_Div container" style="border-radius: 14px;">
+    <div class="row gy-4 gy-md-0 container" style="border-radius: 14px; max-width: 95%;">
+        <div class="col-md-6 container text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center" style="border-radius: 14px;">
+            <div style="max-width: 350px;">
+                <h2 class="text-uppercase fw-bold" style="color: rgb(255,255,255);font-family: Inter, sans-serif; margin:15px auto;">Biben dum<br />fringi dictum, augue purus</h2>
+                <p class="my-3" style="color: rgb(255,255,255);font-family: Inter, sans-serif; ">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p>
+                <a class="Button_Seguir" role="button" href="#" style="text-align: center;font-family: Inter, sans-serif;">Confira Agora <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="col-md-6 container" style="border-radius: 0px; margin:15px auto;">
+            <div class="p-xl-3 m-xl-3" style="border-radius: 0px;"><img class="img-fluid w-100 fit-cover" style="min-height: 300px;margin:15px auto;border-radius: 7px;padding: 0px;margin: 0px;margin-top: 10px;margin-bottom: 10px;margin-right: 10px;margin-left: 0px; object-fit: cover;" src="Images/ImagemDestaque.jpg" /></div>
+        </div>
+    </div>
+</div>
+
+  <div class="container text-center" style="display: flex; justify-content: space-around; background-color: #FFCE1E; margin-top: 20px; border-radius: 14px; max-width: 95%;">
+    <div class="Image_Coupon">
+      <img src="Images/Coupon.svg" width="100px">      
+    </div>
+    <div class="text-center" style="margin: auto 0;">
+    <h1 style="font-family: 'Inter', 'Montserrat', sans-serif; font-weight:500;">Cupom de 10% na Primeira Compra</h1>
+    <h4 style="font-family: 'Inter', 'Montserrat', sans-serif; font-weight:400;">Use PYNPIN10 ao Finalizar a Compra</h4>
+    Confira os <a href="#">Termos e Condições</a>
+    </div>
+    <div class="Image_Coupon">
+      <img src="Images/Bags.svg" width="100px">         
+    </div>
+  </div>
+
+  <div class="destaque_collection">
+    <div class="collection_container">
+      <div class="collection_wrapper">
+          <!--Left Product-->
+          <div class="product_col_left collection_flex">
+            <div class="product_col_content">
+              <h2 class="sm_title">Pijamas</h2>
+              <h2 class="md_title">Pijamas Femininos</h2>
+              <p class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis mauris sit amet sem eleifend consequat a eu ligula. Donec ut ante est. Vestibulum commodo bibendum nulla, ut eleifend risus eleifend eget. Nulla efficitur augue sapien, nec lacinia urna dapibus eget. Quisque sed arcu nec massa volutpat tristique.</p>
+              <button type="button" class="btn_dark">Compre Agora</button>
+            </div>
+          </div>
+         <!--Top Right Product-->
+         <div class="product_col_right">
+            <div class="product_col_r_top collection_flex">
+              <div class="product_col_content">
+                <h2 class="sm_title">Pijamas</h2>
+                <h2 class="md_title">Pijamas Infantis</h2>
+                <p class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis mauris sit amet sem eleifend consequat a eu ligula. Donec ut ante est. Vestibulum commodo bibendum nulla, ut eleifend risus eleifend eget. Nulla efficitur augue sapien, nec lacinia urna dapibus eget. Quisque sed arcu nec massa volutpat tristique.</p>
+                <button type="button" class="btn_dark">Compre Agora</button>
+              </div>
+            </div>
+            <!---->
+            <div class="product_col_r_bottom">
+              <div class="collection_flex">
+                <div class="product_col_content">
+                  <h2 class="sm_title">Promoção de Primavera</h2>
+                  <h2 class="md_title">Até 60% de Desconto</h2>
+                  <p class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis mauris sit amet sem eleifend consequat a eu ligula. Donec ut ante est. Vestibulum commodo bibendum nulla, ut eleifend risus eleifend eget. Nulla efficitur augue sapien, nec lacinia urna dapibus eget. Quisque sed arcu nec massa volutpat tristique.</p>
+                  <button type="button" class="btn_dark">Compre Agora</button>
+                </div>
+              </div>
+              <!--Right-->
+              <div class="collection_flex">
+                <div class="product_col_content">
+                  <h2 class="sm_title">Promoções da Semana</h2>
+                  <h2 class="md_title">Até 40% de Desconto</h2>
+                  <p class="product_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis mauris sit amet sem eleifend consequat a eu ligula. Donec ut ante est. Vestibulum commodo bibendum nulla, ut eleifend risus eleifend eget. Nulla efficitur augue sapien, nec lacinia urna dapibus eget. Quisque sed arcu nec massa volutpat tristique.</p>
+                  <button type="button" class="btn_dark">Compre Agora</button>
+                </div>
+              </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="max-width: 95% !important;">
+    <div class="row my-5">
+      <h1 class="text-center">Teste de Carousel</h1>
+      <p class="fw-light w-75 mx-auto text-center">Descrição das coleções</p>
+    </div>
+    <div class = "row g-4 my-5 mx-auto owl-carousel owl-theme Teste_Carousel">
+      <!--Inicio Produto-->
+      <div class = "col product-item mx-auto">
+          <div class = "product-img">
+              <img src = "Images/Pijama1.png" alt = "" class = "img-fluid d-block mx-auto">
+              <span class = "heart-icon">
+                  <i class = "far fa-heart"></i>
+              </span>
+              <div class = "row btns w-100 mx-auto text-center">
+                  <button type = "button" class = "col-6 py-2 Botao_Carrinho">
+                      <i class = "fa fa-cart-plus"></i> Add to Cart
+                  </button>
+                  <button type = "button" class = "col-6 py-2 Botao_Ver">
+                      <i class = "fa fa-binoculars"></i> View
+                  </button>
+              </div>
+          </div>
+
+          <div class = "product-info p-3">
+              <span class = "product-type">Pijamas e Roupas de Dormir</span>
+              <a href = "#" class = "d-block text-dark text-decoration-none py-2 product-name">Pijama</a>
+              <span class = "product-price">R$ 99,99</span>
+              <div class = "rating d-flex mt-1">
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>(37 Avaliações)</span>
+              </div>
+          </div>
+      </div>
+      <!--Fim Produto-->
+      <div class = "col product-item mx-auto">
+          <div class = "product-img">
+              <img src = "Images/Pijama2.png" alt = "" class = "img-fluid d-block mx-auto">
+              <span class = "heart-icon">
+                  <i class = "far fa-heart"></i>
+              </span>
+              <div class = "row btns w-100 mx-auto text-center">
+                  <button type = "button" class = "col-6 py-2 Botao_Carrinho">
+                      <i class = "fa fa-cart-plus"></i> Add to Cart
+                  </button>
+                  <button type = "button" class = "col-6 py-2 Botao_Ver">
+                      <i class = "fa fa-binoculars"></i> View
+                  </button>
+              </div>
+          </div>
+
+          <div class = "product-info p-3">
+              <span class = "product-type">Pijamas e Roupas de Dormir</span>
+              <a href = "#" class = "d-block text-dark text-decoration-none py-2 product-name">Pijama</a>
+              <span class = "product-price">R$ 99,99</span>
+              <div class = "rating d-flex mt-1">
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>(37 Avaliações)</span>
+              </div>
+          </div>
+      </div>
+
+      <div class = "col product-item mx-auto">
+          <div class = "product-img">
+              <img src = "Images/Pijama3.png" alt = "" class = "img-fluid d-block mx-auto">
+              <span class = "heart-icon">
+                  <i class = "far fa-heart"></i>
+              </span>
+              <div class = "row btns w-100 mx-auto text-center">
+                  <button type = "button" class = "col-6 py-2 Botao_Carrinho">
+                      <i class = "fa fa-cart-plus"></i> Add to Cart
+                  </button>
+                  <button type = "button" class = "col-6 py-2 Botao_Ver">
+                      <i class = "fa fa-binoculars"></i> View
+                  </button>
+              </div>
+          </div>
+
+          <div class = "product-info p-3">
+              <span class = "product-type">Pijamas e Roupas de Dormir</span>
+              <a href = "#" class = "d-block text-dark text-decoration-none py-2 product-name">Pijama</a>
+              <span class = "product-price">R$ 99,99</span>
+              <div class = "rating d-flex mt-1">
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>(37 Avaliações)</span>
+              </div>
+          </div>
+      </div>
+
+      <div class = "col product-item mx-auto">
+          <div class = "product-img">
+              <img src = "Images/Pijama4.png" alt = "" class = "img-fluid d-block mx-auto">
+              <span class = "heart-icon">
+                  <i class = "far fa-heart"></i>
+              </span>
+              <div class = "row btns w-100 mx-auto text-center">
+                  <button type = "button" class = "col-6 py-2 Botao_Carrinho">
+                      <i class = "fa fa-cart-plus"></i> Add to Cart
+                  </button>
+                  <button type = "button" class = "col-6 py-2 Botao_Ver">
+                      <i class = "fa fa-binoculars"></i> View
+                  </button>
+              </div>
+          </div>
+
+          <div class = "product-info p-3">
+              <span class = "product-type">Pijamas e Roupas de Dormir</span>
+              <a href = "#" class = "d-block text-dark text-decoration-none py-2 product-name">Pijama</a>
+              <span class = "product-price">R$ 99,99</span>
+              <div class = "rating d-flex mt-1">
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>(37 Avaliações)</span>
+              </div>
+          </div>
+      </div>
+
+      <div class = "col product-item mx-auto">
+          <div class = "product-img">
+              <img src = "Images/Pijama5.png" alt = "" class = "img-fluid d-block mx-auto">
+              <span class = "heart-icon">
+                  <i class = "far fa-heart"></i>
+              </span>
+              <div class = "row btns w-100 mx-auto text-center">
+                  <button type = "button" class = "col-6 py-2 Botao_Carrinho">
+                      <i class = "fa fa-cart-plus"></i> Add to Cart
+                  </button>
+                  <button type = "button" class = "col-6 py-2 Botao_Ver">
+                      <i class = "fa fa-binoculars"></i> View
+                  </button>
+              </div>
+          </div>
+
+          <div class = "product-info p-3">
+              <span class = "product-type">Pijamas e Roupas de Dormir</span>
+              <a href = "#" class = "d-block text-dark text-decoration-none py-2 product-name">Pijama</a>
+              <span class = "product-price">R$ 99,99</span>
+              <div class = "rating d-flex mt-1">
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>(37 Avaliações)</span>
+              </div>
+          </div>
+      </div>
+
+      <div class = "col product-item mx-auto">
+          <div class = "product-img">
+              <img src = "Images/Pijama6.png" alt = "" class = "img-fluid d-block mx-auto">
+              <span class = "heart-icon">
+                  <i class = "far fa-heart"></i>
+              </span>
+              <div class = "row btns w-100 mx-auto text-center">
+                  <button type = "button" class = "col-6 py-2 Botao_Carrinho">
+                      <i class = "fa fa-cart-plus"></i> Add to Cart
+                  </button>
+                  <button type = "button" class = "col-6 py-2 Botao_Ver">
+                      <i class = "fa fa-binoculars"></i> View
+                  </button>
+              </div>
+          </div>
+
+          <div class = "product-info p-3">
+              <span class = "product-type">Pijamas e Roupas de Dormir</span>
+              <a href = "#" class = "d-block text-dark text-decoration-none py-2 product-name">Pijama</a>
+              <span class = "product-price">R$ 99,99</span>
+              <div class = "rating d-flex mt-1">
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>(37 Avaliações)</span>
+              </div>
+          </div>
+      </div>
+
+      <div class = "col product-item mx-auto">
+          <div class = "product-img">
+              <img src = "Images/Pijama7.png" alt = "" class = "img-fluid d-block mx-auto">
+              <span class = "heart-icon">
+                  <i class = "far fa-heart"></i>
+              </span>
+              <div class = "row btns w-100 mx-auto text-center">
+                  <button type = "button" class = "col-6 py-2 Botao_Carrinho">
+                      <i class = "fa fa-cart-plus"></i> Add to Cart
+                  </button>
+                  <button type = "button" class = "col-6 py-2 Botao_Ver">
+                      <i class = "fa fa-binoculars"></i> View
+                  </button>
+              </div>
+          </div>
+
+          <div class = "product-info p-3">
+              <span class = "product-type">Pijamas e Roupas de Dormir</span>
+              <a href = "#" class = "d-block text-dark text-decoration-none py-2 product-name">Pijama</a>
+              <span class = "product-price">R$ 99,99</span>
+              <div class = "rating d-flex mt-1">
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>(37 Avaliações)</span>
+              </div>
+          </div>
+      </div>
+
+      <div class = "col product-item mx-auto">
+          <div class = "product-img">
+              <img src = "Images/Pijama8.png" alt = "" class = "img-fluid d-block mx-auto">
+              <span class = "heart-icon">
+                  <i class = "far fa-heart"></i>
+              </span>
+              <div class = "row btns w-100 mx-auto text-center">
+                  <button type = "button" class = "col-6 py-2 Botao_Carrinho">
+                      <i class = "fa fa-cart-plus"></i> Add to Cart
+                  </button>
+                  <button type = "button" class = "col-6 py-2 Botao_Ver">
+                      <i class = "fa fa-binoculars"></i> View
+                  </button>
+              </div>
+          </div>
+
+          <div class = "product-info p-3">
+              <span class = "product-type">Pijamas e Roupas de Dormir</span>
+              <a href = "#" class = "d-block text-dark text-decoration-none py-2 product-name">Pijama</a>
+              <span class = "product-price">R$ 99,99</span>
+              <div class = "rating d-flex mt-1">
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>(37 Avaliações)</span>
+              </div>
+          </div>
+      </div>
+
+      <div class = "col product-item mx-auto">
+          <div class = "product-img">
+              <img src = "Images/Pijama9.png" alt = "" class = "img-fluid d-block mx-auto">
+              <span class = "heart-icon">
+                  <i class = "far fa-heart"></i>
+              </span>
+              <div class = "row btns w-100 mx-auto text-center">
+                  <button type = "button" class = "col-6 py-2 Botao_Carrinho">
+                      <i class = "fa fa-cart-plus"></i> Add to Cart
+                  </button>
+                  <button type = "button" class = "col-6 py-2 Botao_Ver">
+                      <i class = "fa fa-binoculars"></i> View
+                  </button>
+              </div>
+          </div>
+
+          <div class = "product-info p-3">
+              <span class = "product-type">Pijamas e Roupas de Dormir</span>
+              <a href = "#" class = "d-block text-dark text-decoration-none py-2 product-name">Pijama</a>
+              <span class = "product-price">R$ 99,99</span>
+              <div class = "rating d-flex mt-1">
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>
+                      <i class = "fa fa-star"></i>
+                  </span>
+                  <span>(37 Avaliações)</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+  </div>
+  <!--<div class="owl-carousel owl-theme owl-loaded">
+    <div class="item"><h4>1</h4></div>
+    <div class="item"><h4>2</h4></div>
+    <div class="item"><h4>3</h4></div>
+    <div class="item"><h4>4</h4></div>
+    <div class="item"><h4>5</h4></div>
+    <div class="item"><h4>6</h4></div>
+  </div>-->
+
+</div>
+<footer class="text-center text-lg-start text-footer">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block" style="color: #353738">
+      <span>Nós Aceitamos:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <span style="margin-right: 1rem;">Acompanhe a loja nas redes sociais:</span>
+      <a class="btn btn-primary btn-floating redes" style="background-color: #3b5998;" href="#!" role="button">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="btn btn-primary btn-floating redes" style="background-color: #55acee;" href="#!" role="button">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="btn btn-primary btn-floating" style="background-color: #ac2bac;" href="#!" role="button">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="btn btn-primary btn-floating" style="background-color: #ac2bac;" href="#!" role="button">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a class="btn btn-primary btn-floating" style="background-color: #ac2bac;" href="#!" role="button">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-4">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-5">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <img src="Images/PynPin - Logo.png" style="width: 200px;">
+          </h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Setores
+          </h6>
+          <p>
+            <a href="#!" class="text-links">Lorem</a>
+          </p>
+          <p>
+            <a href="#!" class="text-links">Ipsum</a>
+          </p>
+          <p>
+            <a href="#!" class="text-links">Dolor</a>
+          </p>
+          <p>
+            <a href="#!" class="text-links">Sit</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Atalhos
+          </h6>
+          <p>
+            <a href="#!" class="text-links">Amet</a>
+          </p>
+          <p>
+            <a href="#!" class="text-links">Consectetur</a>
+          </p>
+          <p>
+            <a href="#!" class="text-links">adipisicing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-links">Elit</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contatos</h6>
+          <p><i class="fa-solid fa-map-location-dot me-3 text-secondary"></i> Poá, SP - Brasil</p>
+          <p>
+            <i class="fa-solid fa-envelope me-3 text-secondary"></i>
+            email@exemplo.com
+          </p>
+          <p><i class="fa-solid fa-phone me-3 text-secondary"></i> Telefone</p>
+        </div>
+        <!--<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.523946247349!2d-46.34432816315602!3d-23.513650538234092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7b3d56997a17%3A0x54f4214e9220a7f2!2zRVRFQyBQb8Oh!5e0!3m2!1spt-BR!2sbr!4v1663686924003!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>-->
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2022 Direitos Reservados:
+    <a class="text-reset fw-bold" href="HomePage.html">PynPin Modas</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+</body>
+</html>

@@ -53,12 +53,12 @@
         </form class="Search_Form">
         <ul class="nav_buttons">
             <a class="Right_Buttons"><i class="fa-regular fa-heart"></i></a>
-            <a class="Right_Buttons" href="Carrinho.html"><i class="fa-solid fa-cart-shopping"></i><span class='badge badge-cart' id='lblCartCount'> 2 </span></a>
+            <a class="Right_Buttons" href="Carrinho.html"><i class="fa-solid fa-cart-shopping"></i><span class='badge badge-cart' id='lblCartCount'> </span></a>
             <a class="Right_Buttons" href="Login.php"><i class="fa-regular fa-user"></i></a>
         </ul>
         </nav>
     </header>
-        <h1 class="Title">Categoria</h1>
+        <h1 class="Title">Todos os Produtos</h1>
         <div class="FilterContainer">
             <div class="Filter">
                 <span class="FilterText">Filtros:</span>
@@ -85,10 +85,10 @@
             </div>
         </div>
         <!-- <div class="ProductsContainer container"> -->
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="ProductsContainer">
             <?php
-                $query_products = "SELECT IdProduto, NomeProduto, PrecoProduto, ImagemProduto, TextoAlternativoProduto FROM tb_produtos ORDER BY IdProduto ASC";
-                $result_products = $PDOConexao->prepare($query_products);
+                $query_products = "SELECT IdProduto, NomeProduto, PrecoProduto, ImagemProduto, TextoAlternativoProduto, PromoInfoProduto, PromoBackgroundProduto FROM tb_produtos ORDER BY IdProduto ASC";
+                $result_products = $conexaoPDO->prepare($query_products);
                 $result_products->execute();
 
                 while($row_product = $result_products->fetch(PDO::FETCH_ASSOC)){
@@ -103,7 +103,7 @@
                 <!--Inicio Produto-->
                 <div class="ProductContainer">
                     <div class="Card card">
-                        <div class="PromoInfo" style="background-color: #FF60AA;">Teste</div>
+                        <div class="PromoInfo" style='background-color: <?php echo "$PromoBackgroundProduto"; ?>;'><?php echo "$PromoInfoProduto"; ?></div>
                         <div class="ImageDiv">
                             <img class="Image" src='<?php echo "./ImagesBD/ProductsImages/$IdProduto/$ImagemProduto"; ?>' alt='<?php echo $TextoAlternativoProduto;?>'/>
                         </div>
