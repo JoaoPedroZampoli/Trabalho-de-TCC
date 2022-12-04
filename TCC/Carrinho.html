@@ -53,31 +53,53 @@
     </nav>
     </header>
     <div class="Cart">
-        <h1 class="Title">Seu Carrinho</h1>
-        <div class="Top">
-            <button class="TopButton" style="border: 2px solid black; background-color: white;">Adicionar mais produtos</button>
-            <div class="TopTexts">
-                <span class="TopText">Itens do Carrinho (0)</span>
-                <span class="TopText">Lista de Desejos</span>
+      <h1 class="Title">Seu Carrinho</h1>
+      <div class="Top">
+          <button class="TopButton" style="border: 2px solid black; background-color: white;">Adicionar mais produtos</button>
+          <div class="TopTexts">
+              <span class="TopText">Itens do Carrinho (0)</span>
+              <span class="TopText">Lista de Desejos</span>
+          </div>
+          <button class="TopButton" style="border: 2px solid transparent; background-color: #FFC60A;">Continuar</button>
+      </div>
+      <div class="Bottom">
+          <div class="Info">
+            <!--Inicio Produto-->
+            <div class="Product">
+              <div class="ProductDetail">
+                  <img class="Image" >
+                  <div class="Details">
+                      <div class="ProductId">Teste</div>
+                      <span class="ProductName">Teste</span>
+                      <div class="ProductColorDescription">Cor: <div class="ProductColor"></div></div>
+                      <span class="ProductSize">Tamanho: M</span>
+                  </div>
+              </div>
             </div>
-            <button class="TopButton" style="border: 2px solid transparent; background-color: #FFC60A;">Continuar</button>
-        </div>
-        <div class="Bottom">
-            <div class="Info">
-                <div class="Product">
-                    <div class="ProductDetail">
-                        <img class="Image" >
-                        <div class="Details">
-                            <div class="ProductId">Teste</div>
-                            <span class="ProductName">Teste</span>
-                            <div class="ProductColorDescription">Cor: <div class="ProductColor"></div>
-                            <span class="ProductSize"></span>
-                        </div>
-                    </div>
-                </div>
+            <!--Final Produto-->
+          </div>
+          <div class="Summary">
+            <h1 class="SummaryTitle"></h1>
+            <div class="SummaryItem">
+              <span class="SummaryItemText">Subtotal:</span>
+              <span class="SummaryItemPrice">R$ 219,99</span>
             </div>
+            <div class="SummaryItem">
+              <span class="SummaryItemText">Frete Estimado:</span>
+              <span class="SummaryItemPrice">R$ 9,90</span>
+            </div>
+            <div class="SummaryItem">
+              <span class="SummaryItemText">Desconto:</span>
+              <span class="SummaryItemPrice">R$ 9,90</span>
+            </div>
+            <div class="SummaryItemTotal">
+              <span class="SummaryItemText">Total:</span>
+              <span class="SummaryItemPrice">R$ 219,99</span>
+            </div>
+            <button class="SummaryButton">Finalizar Compra</button>
+          </div>
         </div>
     </div>
-</div>
+  </div>
 </body>
 </html>

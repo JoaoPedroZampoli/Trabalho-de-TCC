@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Home{
+    height: auto;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+header.NavHeader{
+    position: sticky;
+    width: 100%;
+    z-index: 100000;
+}
+
+.MenuNav{
+    display: flex;
+    position: relative;
+    top:0px;
+    background: #ffdd6300;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.664);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: "Inter", "Montserrat", sans-serif;
+    font-size: 16px;
+    transition: 0.7s;
+    z-index: 100000;
+}
+
+.Menu_Icon {
+    display: none;
+}
+
+.a_navbar{
+    position: relative;
+    color: rgb(60, 60, 60);
+    padding-bottom: 4px;
+}
+
+.a_navbar:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #b556f2;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.a_navbar:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+a:hover{
+    color: black !important;
+}
+
+ul.nav_buttons{
+    margin: auto 0;
+}
+
+.a_navbar:hover{
+    color:black !important;
+}
+
+a.Right_Buttons{
+    border: none;
+    background: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 16px;
+    transition: .6s;
+    width: 44px;
+}
+
+a.Right_Buttons:hover{
+    background: rgb(254, 166, 254);
+    color: black;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: #9f3add;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -7px;
+    margin-top: -3px;
+    position: absolute;
+    transition: 1s;
+}
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.label-cart[href],
+.badge-cart[href] {
+  background-color: #9f3add;
+}
+
+.Search_Bar{
+    border: solid black 0px;
+    border-radius: 10px;
+    font-family: "Inter", "Montserrat", sans-serif;
+    padding: 10px;
+    margin: 0;
+    width: 50vw;
+    background-color: #f3f3f3;
+}
+
+.Search_Bar:focus{
+    border: solid black 0px;
+    border-radius: 10px;
+    font-family: "Inter", "Montserrat", sans-serif;
+    padding: 10px;
+    transition: 1s;
+}
+
+.Search_Button{
+    padding: 10px;
+    width: 46px;
+    height: 46px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: 0.6s;
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+.Search_Button:hover{
+    background-color: black;
+    color: white;
+}
+
+.Title{
+    margin: 20px;
+    font-weight: 600;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 44px;
+}
+
+.FilterContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Filter{
+    margin: 20px;
+}
+
+.FilterText{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.SelectFilter{
+    padding: 6px 10px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+div.ProductsContainer{
+    padding: 20px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 280px); /* 2 */
+    grid-gap: 1rem;
+}
+
+div.ProductsContainer::after{
+    content: "";
+    flex: auto;
+}
+
+div.ProductContainer{
+    /*flex: 1;*/
+    margin: 5px;
+    width: 280px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 8px;
+    transition: 0.5s;  
+}
+
+div.ProductContainer:hover .ProductLike{
+    opacity: 1;
+}
+
+div.ProductContainer:hover .PromoInfo{
+    opacity: 1;
+}
+
+div.ProductContainer:hover .ProductPrice{
+    color: black;
+}
+
+.ProductLike{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    opacity: 0;
+    transition: 0.6s ease;
+    color: black;
+}
+
+.PromoInfo{
+    padding: 5px 12px;
+    position: absolute;
+    border-radius: 4px;
+    margin: 8px;
+    font-weight: 500;
+    /*color: ${props=>props.promoInfoColor};
+    background-color: ${props=>props.promoInfoBackground};*/
+    opacity: 0.6;
+    transition: 0.7s ease;
+}
+
+.ProductPrice{
+    color: #343434;
+}
+
+div.Card{
+    background: #fff;
+    padding: 16px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    margin: 10px;
+    width: 260px;
+    max-height: 420px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+div.Card:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px 0px;
+}
+
+img.Image{
+    border-radius: 4px;
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+div.ProductDetails{
+    margin-top: 10px;
+}
+
+div.ProductRate{
+    font-size: 15px;
+    color: #ffcd4e;
+    margin: 5px 5px 5px 0;
+}
+
+div.DivProductPrice{
+    display: flex;
+    justify-content: space-between;
+    color: #e94560;
+}
+
+h4.ProductPrice{
+    color: #343434;
+}
+
+a.ShoppingCart{
+    background: none;
+    color: #9550D7;
+    font-size: 20px;
+    transition: 0.6s;
+    border: 1px solid rgb(3 0 71 / 9%);
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+a.ShoppingCart:hover{
+    background-color: #9550D7;
+    color: #ffffff;
+
+}
+
+a.ShoppingCart:hover .fa-cart-shopping{
+    color: #ffffff;
+}

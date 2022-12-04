@@ -31,6 +31,9 @@
         <link href="Libraries/CodeSeven-toastr-50092cc/build/toastr.css" rel="stylesheet">
         <script src="Libraries/CodeSeven-toastr-50092cc/toastr.js"></script>
         <!--Toastr Final-->
+        <!--CKEditor Começo-->
+        <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
+        <!--CKEditor Final-->
         <!--Sweet Alert Começo-->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.14/dist/sweetalert2.all.min.js"></script>
         <!--Sweet Alert Final-->
@@ -75,10 +78,9 @@
                         </div>
 
                         <div class="input_group_design">
-                            <input required="" type="text" id="DescProduto" name="DescProduto" class="input_form">
+                            <textarea required="" type="text" id="DescProduto" name="DescProduto" class="input_form"></textarea>
                             <label class="Input_label">Descrição produto:</label>
                         </div>
-
                         <div class="input_group_design">
                             <input required="" type="number" id="PrecoProduto" name="PrecoProduto" class="input_form">
                             <label class="Input_label">Preço produto:</label>
@@ -125,10 +127,10 @@
 
             $retorno = mysqli_query($conexao, $query);
             if($retorno == true){
-                echo "<script>Swal.fire({icon: 'success',title: 'Cadastrado com sucesso.'}).then(()=>{window.location.href = 'AdminPage.php'})</script>";
+                echo "<script>Swal.fire({icon: 'success',title: 'Cadastrado com sucesso.'}).then(()=>{window.location.href = 'alteraradmin.php'})</script>";
             }
             else{
-                echo "<script>Swal.fire({icon: 'error',title: 'Erro ao Cadastrar.'}).then(()=>{window.location.href = 'AdminPage.php'})</script>";
+                echo "<script>Swal.fire({icon: 'error',title: 'Erro ao Cadastrar.'}).then(()=>{window.location.href = 'alteraradmin.php'})</script>";
             }
         }
 

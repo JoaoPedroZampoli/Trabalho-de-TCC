@@ -1,0 +1,395 @@
+.MenuNav{
+    display: flex;
+    position: relative;
+    top:0px;
+    background: #ffdd6300;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(206, 123, 255, 0.13);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: "Inter", "Montserrat", sans-serif;
+    font-size: 16px;
+    transition: 0.7s;
+    z-index: 100000;
+} 
+
+.container{
+    background-color: rgb(255, 255, 255);   
+}
+
+.container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.container form .form{
+    position: relative;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+
+form.secActive .form.first{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: 1s;
+    display: none;
+}
+
+h1{
+    color: white;
+    font-family: "Inter", "Montserrat", sans-serif;
+}
+
+h2{
+    font-family: "Inter", "Montserrat", sans-serif;
+}
+
+.cadastro_title{
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.input-group-prepend{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.input_group_design{
+    position: relative;
+    margin: 15px;
+}
+
+.input_form{
+    width:100%;
+    border: solid 2px #9e9e9e;
+    border-radius: 12px;
+    background: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #000000;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.Input_label{
+    position: absolute;
+    left: 15px;
+    color: #333333;
+    pointer-events: none;
+    transform: translateY(40%);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.input_form:focus, .input_form:valid {
+    outline: none;
+    border: 2px solid #9D3FDC;
+}
+
+.input_form:focus ~ label, .input_form:valid ~ label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #ffffff;
+    padding: 0 .2em;
+    color: #181718;
+}
+
+.input_date:not(:focus, :valid){
+    color:#ffffff00
+}
+
+
+
+.input_complemento:empty{
+    width:100%;
+    border: solid 2px #9e9e9e;
+    border-radius: 12px;
+    background: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #000000;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.input_complemento:not(:placeholder-shown) ~ label, .input_complemento:focus ~ label{
+    outline: none;
+    border: 2px solid #ffffff00;
+    transform: translateY(-50%) scale(0.8);
+    background-color: #f8f9fa;
+    padding: 0 .2em;
+    color: #181718;
+}
+
+.input_complemento:focus, .input_complemento:not(:placeholder-shown) {
+    outline: none;
+    border: 2px solid #9D3FDC;
+}
+
+.input_complemento::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(0, 0, 0, 0);
+    opacity: 1; /* Firefox */
+}
+  
+.input_complemento:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(0, 0, 0, 0);
+}
+  
+.input_complemento::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(0, 0, 0, 0);
+}
+
+input[type=number] .input_group_design {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input_group_confirmation_design{
+    position: relative;
+    margin: 15px;
+    text-align: center;
+}
+
+.input_confirmation{
+    width:10%;
+    height: 100px;
+    border: solid 2px #9e9e9e;
+    border-radius: 12px;
+    background: none;
+    font-size: 2rem;
+    text-align: center;
+    color: #000000;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.input_confirmation:focus, .input_confirmation:valid {
+    outline: none;
+    border: 2px solid #9D3FDC;
+}
+
+#SenhaChecker{
+    transition: 1s;
+}
+
+p.password_quality_p{
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+div.Top_Class{
+    display: flex;
+    position: relative;
+}
+
+.Etapa_Class{
+    margin: 0 auto;
+    margin-top: 10px;
+    font-family: "Inter", "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.Voltar_Class{
+    position: absolute;
+    color: #414141;
+    font-family: "Inter", "Montserrat", sans-serif;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.Voltar_Class:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #b556f2;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.Voltar_Class:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.Voltar_Class:hover{
+    color: rgb(0, 0, 0)
+}
+
+.Continuar_Class{
+    margin: 15px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: end;
+}
+
+button.Button_Cadastro{
+    font-family: "Inter", "Montserrat", sans-serif;
+    border: 1px rgba(0,0,0,0) solid;
+    background-color: #833EC5;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 4px 20px 4px 20px;
+    transition: 0.7s;
+}
+
+button.Button_Cadastro:hover i{
+    transform: translateX(5px);
+    transition: 0.8s;
+}
+
+button.Button_Cadastro:active {
+    transform: scale(0.97);
+}
+
+.Conjunto_Class{
+    margin: 15px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button.Button_Cadastro{
+    font-family: "Inter", "Montserrat", sans-serif;
+    border: 1px rgba(0,0,0,0) solid;
+    background-color: #833EC5;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 4px 20px 4px 20px;
+    transition: 0.7s;
+}
+
+button.Button_Cadastro:hover{
+    font-family: "Inter", "Montserrat", sans-serif;
+    border: 1px rgba(0,0,0,0) solid;
+    background-color: #6a329f !important;
+    color: #ffffff !important;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 4px 20px 4px 20px;
+    transition: 0.7s;
+}
+
+button.Button_Cadastro:hover i{
+    transform: translateX(5px);
+    transition: 0.8s;
+}
+
+button > i{
+    margin-left: 5px;
+    transition: transform .3s ease-in-out;
+}
+
+button.Button_Cadastro:active {
+    transform: scale(0.97);
+}
+
+a.SemEndereco_Class{
+    color: #3d3d3d;
+    align-self: center;
+    font-family: "Inter", "Montserrat", sans-serif;
+}
+
+a.SemEndereco_Class:hover{
+    color: #000000;
+}
+
+#toast-container > .toast {
+    background-image: none !important;
+}
+
+.check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+}
+  
+.check:before {
+content: "";
+position: absolute;
+opacity: 0;
+transition: opacity 0.2s ease;
+}
+
+.check svg {
+position: relative;
+z-index: 1;
+fill: none;
+stroke-linecap: round;
+stroke-linejoin: round;
+stroke: #c8ccd4;
+stroke-width: 1.5;
+transform: translate3d(0, 0, 0);
+transition: all 0.2s ease;
+}
+
+.check svg path {
+stroke-dasharray: 60;
+stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+stroke-dasharray: 22;
+stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+opacity: 1;
+}
+
+.check:hover svg {
+stroke: #9D3FDC;
+}
+
+#Aceite:checked + .check svg, #Newsletter:checked + .check svg {
+stroke: #9D3FDC;
+}
+
+#Aceite:checked + .check svg path, #Newsletter:checked + .check svg path {
+stroke-dashoffset: 60;
+transition: all 0.3s linear;
+}
+
+#Aceite:checked + .check svg polyline, #Newsletter:checked + .check svg polyline {
+stroke-dashoffset: 42;
+transition: all 0.2s linear;
+transition-delay: 0.15s;
+}
+
+.Aceite_text, .Newsletter_text{
+display: inline;
+margin-left: 5px;
+}
+
+.Link_Termos{
+    color: #b556f2;
+    text-decoration: none;
+}
+
+.Link_Termos:hover{
+    color: #9D3FDC;
+    text-decoration: underline;
+}

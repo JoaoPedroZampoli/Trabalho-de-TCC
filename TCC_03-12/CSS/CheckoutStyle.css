@@ -1,0 +1,27 @@
+header.NavHeader{
+    position: relative;
+    width: 100%;
+    z-index: 100000;
+}
+
+.MenuNav{
+    display: flex;
+    position: relative;
+    top:0px;
+    background: #ffdd6300;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(206, 123, 255, 0.13);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: "Inter", "Montserrat", sans-serif;
+    font-size: 16px;
+    transition: 0.7s;
+    z-index: 100000;
+}

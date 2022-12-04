@@ -193,6 +193,52 @@ button.Right_Buttons:hover{
 
 .ProductColorDescription{
     display: flex;
-    justify-content: center;
     align-items: center;
+}
+
+.Summary{
+    flex: 1;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    height: 50vh;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.SummaryTitle{
+    font-weight: 400;
+}
+
+.SummaryItem{
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.SummaryItemTotal{
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.SummaryButton{
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px 20px;
+    background-color: #9550D7;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.MarginCheckout{
+    height: -webkit-fill-available;
+}
+
+.SummaryButton:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 14px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
