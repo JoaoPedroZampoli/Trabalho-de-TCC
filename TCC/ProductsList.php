@@ -53,7 +53,7 @@
         </form class="Search_Form">
         <ul class="nav_buttons">
             <a class="Right_Buttons"><i class="fa-regular fa-heart"></i></a>
-            <a class="Right_Buttons" href="Carrinho.html"><i class="fa-solid fa-cart-shopping"></i><span class='badge badge-cart' id='lblCartCount'> </span></a>
+            <a class="Right_Buttons" href="Carrinho.php"><i class="fa-solid fa-cart-shopping"></i><span class='badge badge-cart' id='lblCartCount'> </span></a>
             <a class="Right_Buttons" href="Login.php"><i class="fa-regular fa-user"></i></a>
         </ul>
         </nav>

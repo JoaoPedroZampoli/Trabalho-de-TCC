@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Home{
+    height: auto;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+header.NavHeader{
+    position: sticky;
+    width: 100%;
+    z-index: 100000;
+}
+
+.MenuNav{
+    display: flex;
+    position: relative;
+    top:0px;
+    background: #ffdd6300;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.664);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: "Inter", "Montserrat", sans-serif;
+    font-size: 16px;
+    transition: 0.7s;
+    z-index: 100000;
+}
+
+.nav_buttons{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.Menu_Icon {
+    display: none;
+}
+
+.shrink{
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    font-size: 16px;
+}
+
+.NavPosition{
+    position: fixed;
+}
+
+button.Right_Buttons{
+    border: none;
+    background: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 16px;
+    transition: .6s;
+    width: 44px;
+}
+
+button.Right_Buttons:hover{
+    background: rgb(254, 166, 254);
+}
+
+.Search_Bar{
+    border: solid black 0px;
+    border-radius: 10px;
+    font-family: "Inter", "Montserrat", sans-serif;
+    padding: 10px;
+    margin: 0;
+    width: 50vw;
+    background-color: #f3f3f3;
+}
+
+.Search_Bar:focus{
+    border: solid black 0px;
+    border-radius: 10px;
+    font-family: "Inter", "Montserrat", sans-serif;
+    padding: 10px;
+    transition: 1s;
+}
+
+.Search_Button{
+    padding: 10px;
+    width: 46px;
+    height: 46px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: 0.6s;
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+.Search_Button:hover{
+    background-color: black;
+    color: white;
+}
+
+.Cart{
+    padding: 20px;
+}
+
+.Title{
+    font-weight: 400;
+    text-align: center;
+}
+
+.Top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.TopButton{
+    padding: 10px;
+    font-weight: 600;
+    width: 240px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.6s;
+}
+
+.TopButton:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 14px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.TopText{
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.Bottom{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 40px;
+}
+
+.Info{
+    flex: 4;
+    margin-right: 10%;
+}
+
+.Product{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.ProductDetail{
+    flex: 2;
+    display: flex;
+}
+
+.Image{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.Details{
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ProductColor{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 7px;
+    border: 1px solid black;
+}
+
+.ProductColorDescription{
+    display: flex;
+    align-items: center;
+}
+
+.Summary{
+    flex: 1;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    height: 50vh;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.SummaryTitle{
+    font-weight: 400;
+}
+
+.SummaryItem{
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.SummaryItemTotal{
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.SummaryButton{
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px 20px;
+    background-color: #9550D7;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.MarginCheckout{
+    height: -webkit-fill-available;
+}
+
+.SummaryButton:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 14px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}

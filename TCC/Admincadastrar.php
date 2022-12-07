@@ -123,7 +123,7 @@
 
             extract($_POST);
 
-            $query = "INSERT INTO `tb_produtos` (`NomeProduto`, `DescricaoProduto`, `PrecoProduto`, `ImagemProduto`, `TextoAlternativoProduto`, `PromoInfoProduto`, `PromoBackgroundProduto`, `DataCriacaoProduto`) VALUES ('$NomeProduto', '$DescProduto', '$PrecoProduto', 'img', '$TxtAlternativo', '$InfoPromo', '$BackProduto', NOW())";
+            $query = "INSERT INTO `tb_produtos` (`NomeProduto`, `DescricaoProduto`, `PrecoProduto`, `Imagem1Produto`, `TextoAlternativoProduto`, `PromoInfoProduto`, `PromoBackgroundProduto`, `DataCriacaoProduto`) VALUES ('$NomeProduto', '$DescProduto', '$PrecoProduto', 'img', '$TxtAlternativo', '$InfoPromo', '$BackProduto', NOW())";
 
             $retorno = mysqli_query($conexao, $query);
             if($retorno == true){

@@ -48,7 +48,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-link">
+                        <!--<li class="nav-link">
                             <a href="#">
                                 <i class='bx bx-bar-chart-alt-2 icon'></i>
                                 <span class="text nav-text">Estatísticas</span>
@@ -60,7 +60,7 @@
                                 <i class='bx bx-user icon'></i>
                                 <span class="text nav-text">Usuários</span>
                             </a>
-                        </li>
+                        </li>-->
 
                         <li class="nav-link">
                             <a href="Admincadastrar.php">
@@ -77,18 +77,18 @@
                         </li>
 
                         <li class="nav-link">
-                            <a href="#">
-                                <i class='bx bx-pie-chart-alt icon'></i>
-                                <span class="text nav-text">Análise</span>
+                            <a href="pedidos.php">
+                                <i class='bx bx-cart icon'></i>
+                                <span class="text nav-text">Pedidos</span>
                             </a>
                         </li>
 
-                        <li class="nav-link">
+                        <!--<li class="nav-link">
                             <a href="#">
                                 <i class='bx bx-wallet icon'></i>
                                 <span class="text nav-text">Wallets</span>
                             </a>
-                        </li>
+                        </li>-->
 
                     </ul>
                 </div>

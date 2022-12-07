@@ -15,7 +15,7 @@
   align-items: center;
   padding:25px;
   min-height: 100vh;
-  background: linear-gradient(90deg, #a00d80e7 60%, #fffb00 40.1%);
+  background: rgb(66, 1, 66);
 }
 
 .container form{
